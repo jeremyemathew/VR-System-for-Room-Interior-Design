@@ -1,0 +1,131 @@
+:root{
+  --bg0:#060816;
+  --bg1:#0b1024;
+
+  --card: rgba(255,255,255,.07);
+  --border: rgba(255,255,255,.10);
+
+  --text:#eef2ff;
+  --muted: rgba(238,242,255,.68);
+
+  --accent:#7c5cff;
+  --accent2:#5fa8ff;
+
+  --radius: 22px;
+  --shadow: 0 24px 80px rgba(0,0,0,.42);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 700px at 15% 10%, rgba(124,92,255,.20), transparent 55%),
+    radial-gradient(900px 700px at 85% 15%, rgba(95,168,255,.16), transparent 50%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+}
+
+.container{
+  width:min(900px, calc(100% - 32px));
+  margin:40px auto;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.header{
+  text-align:center;
+}
+
+h1{
+  margin:0;
+  font-size:28px;
+}
+
+.sub{
+  color:var(--muted);
+  margin-top:6px;
+}
+
+/* title badge */
+.title-badge{
+  display:inline-block;
+  margin-top:14px;
+  padding:14px 22px;
+  font-size:22px;
+  font-weight:700;
+  border-radius:999px;
+  background:rgba(124,92,255,.18);
+  border:1px solid rgba(124,92,255,.4);
+}
+
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:20px 0;
+}
+
+h2{
+  margin-top:26px;
+  font-size:18px;
+  color:var(--accent2);
+}
+
+.section{
+  margin-top:12px;
+}
+
+.small{
+  color:var(--muted);
+}
+
+/* video */
+.video-wrap{
+  margin-top:12px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#000;
+}
+
+video{
+  width:100%;
+  display:block;
+}
+
+/* images */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  margin-top:12px;
+}
+
+.image-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.image-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.caption{
+  padding:10px;
+  font-size:13px;
+  color:var(--muted);
+}
